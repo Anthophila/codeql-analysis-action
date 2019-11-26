@@ -1,0 +1,14 @@
+name: 'CodeQL analysis'
+description: 'Run a bunch of QL queries on your repo'
+author: 'GitHub'
+inputs:
+  language:
+    description: language to analyse 
+    required: true
+  build-command:
+    description: build command for the project - must be a single line
+    required: false
+runs:
+  using: 'node12'
+  main: '../lib/codeql-analysis.js'
+  
